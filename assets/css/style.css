@@ -60,13 +60,13 @@ section {
   #preloader:before {
     content: "";
     position: fixed;
+    width: 60px;
+    height: 60px;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
     border: 6px solid var(--azulclaro);
     border-top-color: var(--azul-principal);
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
     -webkit-animation: animate-preloader 1s linear infinite;
     animation: animate-preloader 1s linear infinite;
   }
@@ -133,12 +133,12 @@ section {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+#header{
   height: 120px;
   transition: all 0.5s;
-  z-index: 100000000000000000000000;
   transition: all 0.5s;
   background: rgba(1, 10, 73, 0.9);
+  z-index: 100000000000000000000000;
 }
   #header.header-transparent {
     background: transparent;
@@ -326,7 +326,6 @@ section {
   z-index: 1000;
 }
 
-
   #hero:before {
     content: "";
     background: rgba(1, 3, 91, 0);;
@@ -338,7 +337,6 @@ section {
     width: 100%;
     height: 100px; 
   }
-
 
   #hero:after{
     content:'';
@@ -409,7 +407,6 @@ section {
   margin-top: -10rem;
 
 }
-
   .about::before {
     content: '';
     position: absolute;
@@ -500,42 +497,44 @@ section {
 /*--------------------------------------------------------------
 # ANIMAÇÃO AMBULANCIA 
 --------------------------------------------------------------*/
-/*o problema está no tamanho da animação */
+
 
 lottie-player{
   position: relative;
   z-index: 100000;
-  width: 150%;
+  width: 100%;
+  top: -37rem;
   object-fit: fill;
-  margin-top: -58rem;
+  display: flex;
 }
 
-.road{
-  position:absolute;
-  margin-top: -57.5rem;
-  height: 65%;
-  justify-content: center;
-  align-items: center;
+lottie-player::before{
+  content: '';
+  position: absolute;
 }
-  .road:after{
+
+lottie-player::after{
+  content: '';
+  position: relative;
+}
+.road{
+  margin-left: -25rem;
+  margin-top: -65rem;
+}
+
+  .road img{
+    position:relative;
+    max-height: 330px;
+    min-width: 100vw; 
+  }
+  .road img:after{
     content: '';
     position:relative;
   }
-  .road:before{
+  .road img:before{
     content: '';
     position: absolute;
-  }
-  .road img{
-    position: relative;
-    display: flex;
-    top:0;
-    bottom: 0;
-    left:-40rem;
-    width:100vw;
-    height: 100%;
-    object-fit: fill;
-    z-index: 10;
-    pointer-events: none;
+    object-fit:cover;
   }
 
 /*--------------------------------------------------------------
@@ -582,16 +581,24 @@ lottie-player{
 --------------------------------------------------------------*/
 
 #important{
-  margin-top: 5rem;
+  position: relative;
+  margin-top: 2rem;
   color: var(--azul-principal)
+}
+
+#important:before{
+  content: '';
+  position:absolute;
+}
+
+#important:after{
+  content: '';
+  position:relative;
 }
 .important {
   font-size: 30px;
   text-align: justify;
-  left: 25%;
-  position: absolute;
-  background: var(--secundario);
-  padding: 70px 0 60px;
+  background: var(--secundario); 
 }
 
 @media (max-width: 575px) {
@@ -601,7 +608,6 @@ lottie-player{
   .important {
     padding: 70px 0 60px;
     font-size: 16px;
-    left: 0%;
   }
 }
 
@@ -609,9 +615,18 @@ lottie-player{
 /*--------------------------------------------------------------
 # extra
 --------------------------------------------------------------*/
-.extra{
+#extra{
   position: relative;
-  margin-top: 25rem;
+  
+}
+#extra:before{
+  content: '';
+  position:absolute;
+}
+
+#extra:after{
+  content: '';
+  position:relative;
 }
 
 .bl-box{
@@ -1417,15 +1432,7 @@ input[value]{
 
 
 @media (max-width: 575px) {
-  .road2:after{
-    content: '';
-    position:relative;
-    
-  }
-  .road2:before{
-    content: '';
-    position: absolute;
-  }
+  
   .road2 img{
     position: relative;
     display: flex;
@@ -1467,12 +1474,24 @@ input[value]{
 /*--------------------------------------------------------------
 # Transporte
 --------------------------------------------------------------*/
-.transporte {
+#transporte {
   margin-top: -85rem;
-  left: -50%;
-  width: 100vw;
   padding: 80px 0;
   background-color: var(--azul-principal);
+  position: relative;
+}
+
+#transporte::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#transporte::after {
+  content: "";
   position: relative;
 }
 
@@ -1481,15 +1500,6 @@ input[value]{
   font-size: 55px;
 }
 
-.transporte::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: var(--azul-principal);
-}
 .transporte .section-header {
   margin-bottom: 40px;
 }
@@ -1561,7 +1571,6 @@ input[value]{
 @media (max-width: 575px) {
   .transporte {
     margin-top: -18rem;
-    left: 0;
     width: 110%;
     padding: 80px 0;
     background-color: var(--azul-principal);
@@ -1639,6 +1648,21 @@ input[value]{
 /*--------------------------------------------------------------
 # Apoiar
 --------------------------------------------------------------*/
+#apoiar{
+  color: var(--azul-principal);
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+#apoiar::after{
+  content: '';
+  position: relative;
+}
+#apoiar::before{
+  content: '';
+  position: absolute;
+}
 
 
 #apoiar h2{
@@ -1661,11 +1685,6 @@ input[value]{
   padding-right: 10px;
 }
 
-#apoiar{
-  color: var(--azul-principal);
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
 
 @media (max-width: 575px) {
   #apoiar h2{
@@ -1697,11 +1716,20 @@ input[value]{
 # Contador de desejos
 --------------------------------------------------------------*/
 #desejo{
+  position: relative;
   background-color: var(--azul-principal);
-  width: 100vw;
-  margin-left: -50%;
   font-size: 25px;
   height: 500px;
+}
+
+#desejo::after{
+  content: '';
+  position: relative;
+}
+
+#desejo::before{
+  content: '';
+  position: absolute;
 }
 
 #desejo .container{
