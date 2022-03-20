@@ -628,19 +628,25 @@ lottie-player::after{
   content: '';
   position:relative;
 }
-  .bl-box:hover{
+
+#extra button{
+  width: 20vw;
+  height: 30vh;
+  border-color: transparent;
+}
+#extra button:hover{
     opacity: 0.5;
   }
 
-  .bl-box figure{
+  #extra figure{
   text-align: center;
   font-family: var(--bold);
   }
 
-  .bl-box figure img{
+  #extra figure img{
     width: 70px;
   }
-  .bl-box figcaption{
+  #extra figcaption{
     text-align: center;
     font-size: 35px;
     color: white;
@@ -665,7 +671,7 @@ lottie-player::after{
     font-size: 25px;
   }
 
-#bl-volunt-section{
+  #bl-volunt-section{
   background-color: #3956A0;
   border-radius: 30px;
 }
@@ -674,10 +680,6 @@ lottie-player::after{
     padding-top: 10px;
     font-size: 35px;
   }
-
-.modal-backdrop{
-  position: relative;
-}
 
 
 .modal-header{
@@ -707,15 +709,11 @@ lottie-player::after{
   .extra{
     margin-top: 20rem;
   }
-  .bl-box{
-    top: -1rem;
-    height: 3rem;
-  }  
   
-  .bl-box figure img{
+  #extra figure img{
     width: 40px;
   }
-  .bl-box figcaption{
+  #extra figcaption{
     font-size: 15px;
   }
 
@@ -724,7 +722,7 @@ lottie-player::after{
     font-size: 17px;
   }
 
-  #bl-volunt-section .bl-box figcaption{
+  #bl-volunt-section figcaption{
     padding-top: 10px;
     font-size: 15px;
   }
@@ -771,6 +769,20 @@ lottie-player::after{
 /*--------------------------------------------------------------
 # Formulário
 --------------------------------------------------------------*/
+#form{
+  position: relative;
+}
+
+#form::before{
+  content: '';
+  position: absolute;
+}
+
+#form::after{
+  content: '';
+  position: relative;
+}
+
 .formtext{
   font-size: 25px;
 }
@@ -1335,23 +1347,26 @@ input[value]{
 /*--------------------------------------------------------------
 # LOADING FORMULÁRIO
 --------------------------------------------------------------*/
-
-.road2:after{
-  content: '';
-  position:relative; 
+.road{
+  position: relative;
 }
 .road2:before{
   content: '';
   position: absolute;
 }
+.road2:after{
+  content: '';
+  position:relative; 
+}
+
 .road2 img{
   position: relative;
   display: flex;
-  top:-90rem;
+  top:-55rem;
   left:0;
-  margin-left: -40rem;
-  width:110vw;
-  height: 500px;
+  margin-left: -25rem;
+  width: 120vw;
+  height: 300px;
   object-fit: fill;
   pointer-events: none;
 }
@@ -1359,10 +1374,10 @@ input[value]{
 .ambulance img{
   position: relative;
   display: flex;
-  top:-40rem;
+  top:-25rem;
   left:0;
   margin-left: -2rem;
-  width:110vw;
+  width:80vw;
   height: 100%;
   object-fit: fill;
   z-index: 10;
@@ -1370,8 +1385,8 @@ input[value]{
 }
 .badge{
   position: relative;
-  top: 8rem;
-  margin-left: 15rem;
+  top: 3rem;
+  margin-left: 10rem;
   z-index: 1200;
   background-color: var(--azul-principal);
   padding: 20px 15px;
@@ -1424,7 +1439,7 @@ input[value]{
 # Transporte
 --------------------------------------------------------------*/
 #transporte {
-  margin-top: -85rem;
+  margin-top: -60rem;
   padding: 80px 0;
   background-color: var(--azul-principal);
   position: relative;

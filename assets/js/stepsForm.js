@@ -236,7 +236,7 @@
 	stepsForm.prototype._badge = function(){
 		var currentProgress = this.current * ( 100 / this.questionsCount );
 		this.badge.style.left = currentProgress + '%';
-		this.badge.textContent = currentProgress +'%';
+		this.badge.textContent = Math.round(currentProgress) +'%';
 	}
 	
 	// changes the current question number
