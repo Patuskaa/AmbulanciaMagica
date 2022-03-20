@@ -665,6 +665,7 @@ lottie-player{
 #bl-about-section{
   background-color: #566BB7;
   border-radius: 30px;
+  z-index: 1000000;
 }
   .admissaoimg img{
     margin-bottom: 1rem;
