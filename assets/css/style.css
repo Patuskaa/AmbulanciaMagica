@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-  padding: 60px 0;
+  padding: 100px 0;
   overflow: hidden;
 }
 
@@ -394,6 +394,14 @@ section {
     display: none;
   }
 }
+@media (max-width: 1200px) {
+  #hero img{
+    object-position: 20% 0;
+  }
+  #hero #star{
+    display: none;
+  }
+}
 
 /*--------------------------------------------------------------
 # Quem somos?
@@ -494,6 +502,33 @@ section {
   }
 }
 
+@media (max-width: 1200px) {
+ 
+  .description p{
+    font-size: 18px;
+  }
+  .bpi img, .fundation img{
+    width: 100%;
+    padding-top:0;
+  }
+  .slide_tittle img{
+    width: 170px;
+  }
+  .topicos{
+    margin-left: 2rem;
+   
+  }
+  .list-group-items{
+    padding: 0.5rem 0.5px;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    font-size: 18px;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 100%;
+  }
+}
+
 /*--------------------------------------------------------------
 # ANIMAÇÃO AMBULANCIA 
 --------------------------------------------------------------*/
@@ -518,14 +553,14 @@ lottie-player::after{
   position: relative;
 }
 .road{
-  margin-left: -25rem;
+  margin-left: -40rem;
   margin-top: -65rem;
 }
 
   .road img{
     position:relative;
     max-height: 330px;
-    min-width: 100vw; 
+    min-width: 140vw; 
   }
   .road img:after{
     content: '';
@@ -546,13 +581,79 @@ lottie-player::after{
     position: relative;
     z-index: 100000;
     width: 150%;
-    margin-top: -15rem;
+    margin-top:0rem;
   }
   .road{
     position:relative;
-    margin-top: -18rem;
+    margin-top: 0rem;
     justify-content: center;
     align-items: center;
+  }
+    .road:after{
+      content: '';
+      position:relative;
+    }
+    .road:before{
+      content: '';
+      position: absolute;
+    }
+    .road img{
+      position: relative;
+      display: flex;
+      top:0;
+      left:0;
+      margin-left: -2rem;
+      width:110vw;
+      height: 100%;
+      object-fit: fill;
+      z-index: 10;
+      pointer-events: none;
+    }
+}
+
+@media (max-width: 575px) {
+  lottie-player{
+    position: relative;
+    z-index: 100000;
+    width: 150%;
+    margin-top:0rem;
+  }
+  .road{
+    position:relative;
+    margin-top: 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+    .road:after{
+      content: '';
+      position:relative;
+    }
+    .road:before{
+      content: '';
+      position: absolute;
+    }
+    .road img{
+      position: relative;
+      display: flex;
+      top:0;
+      left:0;
+      margin-left: -2rem;
+      width:110vw;
+      height: 100%;
+      object-fit: fill;
+      z-index: 10;
+      pointer-events: none;
+    }
+}
+
+@media (max-width: 1200px) {
+  lottie-player{
+    width: 90%;
+    margin-top: 15rem;
+  }
+  .road{
+    margin-top: -60rem;
+    margin-left: -2rem;
   }
     .road:after{
       content: '';
@@ -583,7 +684,7 @@ lottie-player::after{
 #important{
   position: relative;
   margin-top: 2rem;
-  color: var(--azul-principal)
+  color: var(--azul-principal);
 }
 
 #important:before{
@@ -611,6 +712,15 @@ lottie-player::after{
   }
 }
 
+@media (max-width: 1200px) {
+  #important{
+    margin-top: 0.5rem;
+  }
+  .important {
+    padding: 70px 0 60px;
+    font-size: 22px;
+  }
+}
 
 /*--------------------------------------------------------------
 # extra
@@ -630,7 +740,7 @@ lottie-player::after{
 }
 
 #extra button{
-  width: 20vw;
+  width: 15vw;
   height: 30vh;
   border-color: transparent;
 }
@@ -725,6 +835,70 @@ lottie-player::after{
   #bl-volunt-section figcaption{
     padding-top: 10px;
     font-size: 15px;
+  }
+  
+  .bl-main > section .bl-icon-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /*ver isto: */
+  .bl-icon-close:before {
+    content: "";
+  }
+  .bl-content, 
+  div.bl-panel-items > div > div {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    padding: 0 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .admissaocontent p, .criterioscontent p, .voluntcontent p{
+    font-family: var(--light);
+    font-size: 14px;
+  }
+  .criterioscontent img{
+    width: 120%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .extra{
+    margin-top: 0;
+  }
+  #extra button{
+    width: 25vw;
+    height: 30vh;
+    border-color: transparent;
+  }
+  #extra figure img{
+    width: 60px;
+  }
+  #extra figcaption{
+    font-size: 20px;
+  }
+
+  #bl-work-section .bl-box {
+    padding-top: 10px;
+    font-size: 17px;
+  }
+
+  #bl-volunt-section figcaption{
+    padding-top: 10px;
+    font-size: 20px;
   }
   
   .bl-main > section .bl-icon-close {
@@ -1344,6 +1518,127 @@ input[value]{
   }
 }
 
+@media (max-width: 1200px) {
+  
+  .formtext{
+    font-size: 20px;
+  }
+  .formtext img{
+    width: 350px;
+  }
+  .download img{
+    padding-top: 25px;
+    width: 25px;
+  }
+  .simform {
+    margin: -2em auto;
+    max-width: 860px;
+    width: 80%;
+    text-align: left;
+    font-size: 25px;
+  }
+  .simform ol:before {
+    content: '';
+    height: 2.35em;
+  }
+  .questions li > span label {
+    font-size: 25px;
+  }
+  .questions input {
+      height: 3.1em;
+  }
+
+  .questions input {
+    font-size: 22px;
+  }
+  thead{
+    font-size: 20px;
+    color:white;
+    background-color: var(--azul-principal);
+    padding-bottom: 20px;
+  }
+  .tabela{
+    width: 90vw;
+  }
+  .tabela input{
+    font-size: 20px;
+    text-align: center;
+  }
+  .next, .prev{
+    font-size: 18px;
+  }
+  .prev{
+    left: 18px;
+  }
+  .simform .progress {
+    height: 0.6em;
+  }
+  .simform .error-message {
+    left: 85px;
+    top: 130px;
+    padding: 0.4em 3.5em 0 0;
+    width: 100%;
+    color: rgb(128, 5, 5);
+    font-style: italic;
+    font-size: 0.7em;
+  }
+  .autorizacao p{
+    font-size: 20px;
+  }
+  input[type=checkbox]:before {
+    content: "";
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    
+  }
+  input[type=checkbox]:checked:after {
+    content: "";
+    width: 10px;
+    height: 30px;
+    border-width: 0 5px 5px 0;
+    
+  }
+  .formtxt{
+    margin-top: 0;
+    height: 2rem;
+    margin-bottom: 4rem;
+  }
+  .formtxt img{
+    margin-left: 0;
+    padding-left: 10px;
+    width: 350px;
+  }
+
+  .concluidoimg img{
+    width: 65px;
+    margin-left: -30px;
+  }
+
+  .formtxt span{
+    font-size: 25px;
+    padding-left: 10px;
+  }
+
+  .txtform p{
+    margin-left: 0;
+    font-size: 20px;
+    text-align: left;
+    color: var(--azul-principal);
+  }
+  .txtform{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
+}
+
 /*--------------------------------------------------------------
 # LOADING FORMULÁRIO
 --------------------------------------------------------------*/
@@ -1362,11 +1657,11 @@ input[value]{
 .road2 img{
   position: relative;
   display: flex;
-  top:-55rem;
+  top:-60rem;
   left:0;
-  margin-left: -25rem;
+  margin-left: -40rem;
   width: 120vw;
-  height: 300px;
+  height: 360px;
   object-fit: fill;
   pointer-events: none;
 }
@@ -1385,7 +1680,7 @@ input[value]{
 }
 .badge{
   position: relative;
-  top: 3rem;
+  top: 5rem;
   margin-left: 10rem;
   z-index: 1200;
   background-color: var(--azul-principal);
@@ -1435,12 +1730,50 @@ input[value]{
   }
 }
 
+@media (max-width: 1200px) {
+  
+  .road2 img{
+    top:-38rem;
+    left:0;
+    margin-left: -2rem;
+    width:110vw;
+    height: 210px;
+    object-fit: fill;
+    pointer-events: none;
+  }
+  
+  .ambulance img{
+    position: relative;
+    display: flex;
+    top:-17rem;
+    left:-5rem;
+    margin-left: -2rem;
+    width:110vw;
+    height: 100%;
+    object-fit: fill;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  
+  .badge{
+    position: relative;
+    top: 2rem;
+    margin-left: 1rem;
+    z-index: 1200;
+    background-color: var(--azul-principal);
+    padding: 10px 8px;
+    border-radius: 55px;
+    font-size: 10px;
+  }
+}
 /*--------------------------------------------------------------
 # Transporte
 --------------------------------------------------------------*/
 #transporte {
   margin-top: -60rem;
   padding: 80px 0;
+  margin-left: -7%;
   background-color: var(--azul-principal);
   position: relative;
 }
@@ -1609,6 +1942,30 @@ input[value]{
     background-color: var(--azulclaro);
 }
 }
+
+@media (max-width: 1200px) {
+  #transporte {
+    margin-top: -45rem;
+  }
+  .transporte h1{
+    padding-left:6rem;
+  } 
+  .transporte-item p{
+    font-size:20px;
+  }
+  
+  .transporte .transporte-item .transporte-img {
+    width: 100px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.15);
+    margin: 0 auto;
+  }
+  .transporte .transporte-item h1{
+    font-size: 35px;
+    padding-bottom: 15px;
+  }
+  
+}
 /*--------------------------------------------------------------
 # Apoiar
 --------------------------------------------------------------*/
@@ -1617,6 +1974,7 @@ input[value]{
   position: relative;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  margin-left: 3%;
 }
 
 #apoiar::after{
@@ -1676,6 +2034,26 @@ input[value]{
   }
 }
 
+@media (max-width: 1200px) {
+  #apoiar{
+    margin-left: 25%;
+  }
+  #apoiar h2{
+    font-size: 55px;
+  }
+  #apoiar p{
+    font-size: 20px;
+  }
+
+  #apoiar{
+    color: var(--azul-principal);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .ajudar img{
+    width: 45px;
+  }
+}
 /*--------------------------------------------------------------
 # Contador de desejos
 --------------------------------------------------------------*/
@@ -1740,13 +2118,31 @@ input[value]{
     margin-top: 0;
   }
 }
-
+@media (max-width: 1200px) {
+  #desejo img{
+    margin-top: 15%;
+    width: 450px;
+  }
+  #desejo .col-1{
+    text-align: center;
+    margin-left: 5px;
+    background-color: rgba(106, 107, 172, 0.329);
+    color: white;
+    border-radius: 5px;
+    max-height: 205px; 
+  }
+  #desejo .col-1 p{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 4rem;
+  }
+}
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 #contacto{
-  padding-left: 25%;
+  padding-left: 3%;
   color: var(--azul-principal);
 }
 #contacto .section-title h2{
@@ -1785,4 +2181,20 @@ strong{
     height: 100;
   }
 }
+
+@media (max-width: 1200px) {
+  .adress{
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+  }
+  #contacto .section-title h2{
+    font-size: 45px;
+  }
+  iframe{
+    width: 350px;
+    height: 150px;
+  }
+}
+
 
