@@ -34,7 +34,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top align-items-center header-transparent">
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center justify-content-between ">
 
       <div class="logo">
@@ -279,6 +279,7 @@
     
     <!-- ======= form Section ======= -->
 
+
   <section id="form">
     <div class="container formcontainer " data-aos="zoom-out-down">
       <div class="final-message"></div>
@@ -294,7 +295,7 @@
         </div>
   
 			<section>
-				<form id="theForm" class="simform ms-5">
+				<form  id="theForm" class="simform ms-5" method="Post" action="contact.php">
 					<div class="simform-inner">
 						<ol class="questions">
 							<li>
@@ -348,10 +349,6 @@
 							<li>
 								<span><label for="q13">Qual é o nome completo do seu médico responsável?</label></span>
 								<input id="q13" name="q13" type="text"/>
-							</li>
-              <li>
-								<span><label for="q22">Qual é o nome da sua instituição ou serviço?</label></span>
-								<input id="q22" name="q22" type="text"/>
 							</li>
 							<li>
 								<span><label for="q14">Utiliza algum dispositivo médico? se sim, indique quais?</label></span>
@@ -457,7 +454,7 @@
 						</ol><!-- /questions -->
 						
 						
-						<button class="submit" type="submit">Send answers</button>
+						<button class="submit" type="submit" name="submit">Send answers</button>
 						
 						<div class="controls">
 
@@ -495,7 +492,7 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="transporte-item me-4">
+              <div class="transporte-item me-4 mt-5">
                 <h1>Transporte</h1>
                 <p>
                   O transporte do projeto “Ambulância Mágica” é realizado numa Ambulância tipo C, totalmente preparada com material e medicação que permita a estabilidade do/a doente, suporte ventilatório e a presença de um médico e enfermeiro. Será também acompanhado pela Equipa Técnica do Projeto e por pessoa significativa.
@@ -504,7 +501,7 @@
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="transporte-item me-4">
+              <div class="transporte-item me-4 mt-5">
                 
                 <h1>Transporte</h1>
                 <p>
@@ -514,7 +511,7 @@
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="transporte-item me-4">
+              <div class="transporte-item me-4 mt-5">
                 
                 <h1>Transporte</h1>
                 <p>
@@ -537,7 +534,7 @@
       
       <div class="container">
 
-        <div class="section-title" data-aos="fade-up">
+        <div class="section-title mt-5" data-aos="fade-up">
           <h2>Apoiar</h2>
         </div>
 
@@ -614,7 +611,7 @@
     <section id="contacto" class="contact" data-aos="fade-up">
       <div class="container">
 
-        <div class="section-title" >
+        <div class="section-title mt-5" >
           <h2>Contactos</h2>
         </div>
 

@@ -220,6 +220,8 @@
 		}
 	}
 
+
+
 	// updates the progress bar by setting its width
 	stepsForm.prototype._progress = function() {
 		var currentProgress = this.current * ( 100 / this.questionsCount );

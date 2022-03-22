@@ -137,12 +137,18 @@ h1, h2, h3, h4, h5, h6 {
   height: 120px;
   transition: all 0.5s;
   transition: all 0.5s;
-  background: rgba(1, 10, 73, 0.9);
+  background-color: var(--azul-principal);
   z-index: 100000000000000000000000;
 }
-  #header.header-transparent {
-    background: transparent;
-  }
+#header:after{
+  content: '';
+  position:'relative';
+}
+#header:before{
+  content: '';
+  position: absolute;
+}
+ 
   #header.header-scrolled {
     background: rgba(1, 10, 73, 0.9);
     height: 100px;
@@ -170,9 +176,11 @@ h1, h2, h3, h4, h5, h6 {
 * Mobile Navigation 
 */
 
+
     @media (max-width: 575px) {
       #header {
         height: 80px;
+        background-color: var(--azul-principal);
       }
       #header.header-scrolled {
         height: 80px;
@@ -185,6 +193,7 @@ h1, h2, h3, h4, h5, h6 {
         max-height: 50px;
         padding-bottom: 0;
       }  
+      
     }
 /*--------------------------------------------------------------
 # NAVBAR
@@ -195,6 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
   padding: 0;
+  
 }
   .navbar ul {
     margin: 0;
@@ -264,6 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    left: -86rem;
   }
   .navbar ul {
     display: none;
@@ -1959,8 +1970,8 @@ input[value]{
   display: flex;
   top:-90rem;
   left:0;
-  margin-left: -40rem;
-  width: 120vw;
+  margin-left: -60rem;
+  width: 320vw;
   height: 360px;
   object-fit: fill;
   pointer-events: none;
@@ -2028,7 +2039,7 @@ input[value]{
   .badge{
     position: relative;
     top: 10rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
     font-size: 10px;
     padding: 10px 10px;
 
@@ -2075,21 +2086,41 @@ input[value]{
 }
 
 @media (min-width: 1400px) {
-  
   .road2 img{
     top:-25rem;
     margin-left: -20rem;
     width:320vw;
-    height: 300px;
+    height: 250px;
   }
   
   .ambulance img{
+    top: -2rem;
     margin-left: -2rem;
     width:60vw;
   }
   .badge{
     position: relative;
-    top: 14rem;
+    top: 10rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  .road2 img{
+    top:-28rem;
+    margin-left: -40rem;
+    width:320vw;
+    height: 250px;
+  }
+  
+  .ambulance img{
+    top: -2rem;
+    margin-left: -2rem;
+    width:60vw;
+  }
+  .badge{
+    position: relative;
+    top: 10rem;
     margin-left: 1rem;
   }
 }
