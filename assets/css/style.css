@@ -1,9 +1,13 @@
 /*--------------------------------------------------------------
 # Geral
 --------------------------------------------------------------*/
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+
+
 @font-face{
   font-family: "Gotham Bold";
-  src:url("/assets/Recursos/Gotham-Bold.otf") format("opentype");
+  src:url("/assets/Recursos/Gotham-Light.otf") format("opentype");
 }
 @font-face{
 font-family: "Gotham Light";
@@ -12,8 +16,8 @@ font-family: "Gotham Light";
 
 :root{
   --azul-principal: #010A49;
-  --bold: 'Gotham Bold';
-  --light: 'Gotham Light';
+  --bold: 'Gotham', sans-serif;
+  --light: 'Gotham Light', sans-serif;
   --branco: #868ea3;
   --secundario: #DFE2EF;
   --azulclaro: #6ABDFF;
@@ -895,6 +899,7 @@ lottie-player::after{
   #extra figure{
   text-align: center;
   font-family: var(--bold);
+ 
   }
 
   #extra figure img{
@@ -904,7 +909,10 @@ lottie-player::after{
     text-align: center;
     font-size: 35px;
     color: white;
+    text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: var(--bold);
+    font-weight: 700;
   }
 
 #bl-about-section{
@@ -1137,7 +1145,7 @@ lottie-player::after{
 
 .questions li > span label {
 	display: block;
-	font-family: "Gotham Bold";
+	font-family:var(--bold);
   font-size: 35px;
   margin-bottom: 10px;
 	-webkit-transition: -webkit-transform 0.4s;
